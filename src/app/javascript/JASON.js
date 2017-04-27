@@ -1,10 +1,8 @@
 var jsonStr = JSON.stringify([
   {
-    "name" : "Mohan Kumar Guruswamy",
-    "company" : "CTS"
+    "name" : "Mohan Kumar Guruswamy"
   },{
-    "name" : "Nathiya Annamalai",
-    "company" : "House Wife"
+    "name" : "Nathiya Annamalai"
   }
 ]);
 
