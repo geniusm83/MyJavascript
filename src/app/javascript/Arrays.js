@@ -52,6 +52,49 @@ var arr_func9 = function(){
 	arr = arr.concat(temp);
 	arr_func1();
 }
+
+var arr_excercise1 = function(){
+	function range(start, end, step){
+		var arr = [];
+		for (var i = start; i <= end; step?i+=step:i++) {
+			arr.push(i);
+		}
+		return arr;
+	}
+
+ 	function sum(arr){
+		var total = 0;
+		for (var i = 0; i < arr.length; i++) {
+			total += arr[i];
+		}
+		return total;
+	}
+
+	 var reverse = function(arr){
+		var reverse = [];
+		while(arr.length != 0) {
+			reverse.push(arr.pop());
+		}
+		return reverse;
+	}
+
+	var reverseInPlace = function(arr){
+		var len = arr.length;
+		while(len != 0) {
+			var a = arr.pop();
+			arr.unshift(a);
+			len--;
+		}
+		return arr;
+	}
+
+	return {
+		createArray : range,
+		sumArray : sum,
+		revArray : reverse,
+		reverseArrayInPlace : reverseInPlace
+	};
+}
 // arr_func2();
 // arr_func3();
 // arr_func4();
@@ -60,4 +103,11 @@ var arr_func9 = function(){
 // arr_func7(20);
 // arr_func8(2,4);
 // arr_func8(3);
-arr_func9();
+// arr_func9();
+
+var new_array = arr_excercise1().createArray(10,15);
+// console.log(arr_excercise1().sumArray(new_array));
+// console.log(arr_excercise1().revArray(new_array));
+console.log(arr_excercise1().revArray(new_array));
+// document.write(new_array);
+// document.write(arr_excercise1.sumArray(new_array));
